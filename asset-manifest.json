@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/avalonship/static/css/main.0b7c30e8.css",
-    "main.js": "/avalonship/static/js/main.e30c1b63.js",
-    "static/js/453.ed3810f9.chunk.js": "/avalonship/static/js/453.ed3810f9.chunk.js",
-    "static/media/logo.jpg": "/avalonship/static/media/logo.f8b6ebc8ff613c301dec.jpg",
-    "index.html": "/avalonship/index.html",
-    "main.0b7c30e8.css.map": "/avalonship/static/css/main.0b7c30e8.css.map",
-    "main.e30c1b63.js.map": "/avalonship/static/js/main.e30c1b63.js.map",
-    "453.ed3810f9.chunk.js.map": "/avalonship/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/css/main.0b7c30e8.css",
+    "main.js": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/js/main.b1617275.js",
+    "static/js/453.ed3810f9.chunk.js": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/js/453.ed3810f9.chunk.js",
+    "static/media/logo.jpg": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/media/logo.f8b6ebc8ff613c301dec.jpg",
+    "index.html": "/avalonshipnpm%20install%20gh-pages%20--save-dev/index.html",
+    "main.0b7c30e8.css.map": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/css/main.0b7c30e8.css.map",
+    "main.b1617275.js.map": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/js/main.b1617275.js.map",
+    "453.ed3810f9.chunk.js.map": "/avalonshipnpm%20install%20gh-pages%20--save-dev/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b7c30e8.css",
-    "static/js/main.e30c1b63.js"
+    "static/js/main.b1617275.js"
   ]
 }
