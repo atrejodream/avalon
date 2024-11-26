@@ -1,0 +1,8 @@
+.main-wrapper {
+  background-color: #6b6b6b;
+  flex: 1; /* автоматичне заповнення доступного простору */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

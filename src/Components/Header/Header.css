@@ -1,6 +1,75 @@
-header {
-  background-color: #fff;
+.header {
+  background-color: #29333c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  width: 40px; /* Вузький розмір для приховування тексту */
+  transition: width 0.3s; /* Плавне розширення */
+  padding: 5px;
+  border-right: 4px solid #136fd5;
 }
-header img {
-  width: 100px;
+.nav-link.active {
+  background-color: #136fd5; /* Синій фон для активного посилання */
+}
+.header:hover {
+  width: auto; /* Розширює меню при наведенні */
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background-color: #3a4752;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap; /* Забороняє перенесення тексту */
+  overflow: hidden; /* Приховує текст, якщо він виходить за межі */
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  transition: white-space 0s;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.nav-link span {
+  opacity: 0; /* Робить текст невидимим */
+  transition: opacity 0.3s; /* Плавна поява тексту */
+}
+.header:hover .nav-link span {
+  opacity: 1; /* Показує текст при наведенні */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
