@@ -1,0 +1,68 @@
+.root {
+  position: relative;
+  width: 100%;
+}
+.root * {
+  box-sizing: border-box;
+}
+.input {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #29333cb0;
+}
+.input::placeholder {
+  color: #fff;
+}
+.input:focus {
+  border: 1px solid #fff;
+  outline: none;
+  position: relative;
+  background-color: #29333c;
+  z-index: 2;
+}
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.suggestions {
+  position: absolute;
+  color: #fff;
+  top: -16px;
+  padding: 20px 2px 2px;
+  transform: translateY(39px);
+  background-color: #29333cb0;
+  width: 100%;
+  max-width: 320px;
+  z-index: 10;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.listItem {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.listItem:hover {
+  background-color: #126fd5;
+  border-radius: 20px;
+}

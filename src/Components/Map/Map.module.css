@@ -1,6 +1,6 @@
-.main-wrapper {
+.mainWrapper {
   background-color: #6b6b6b;
-  flex: 1; /* автоматичне заповнення доступного простору */
+  flex: 1 1; /* автоматичне заповнення доступного простору */
   display: flex;
   justify-content: center;
   align-items: center;

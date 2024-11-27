@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { GoogleMap } from "@react-google-maps/api";
-import "./Map.css";
+import s from "./Map.module.css";
 import { defaultTheme } from "./ThemeMap";
 
 // Налаштування контейнера карти
@@ -23,13 +23,8 @@ const defaultOptions = {
   disableDoubleClickZoom: false,
   fullscreenControl: false,
 };
-// Центр карти
-const center = {
-  lat: 45.2, // Широта
-  lng: 29.5, // Довгота
-};
 
-const Map = () => {
+const Map = ({ center }) => {
   const mapRef = useRef(undefined);
   const onLoad = React.useCallback(function callback(map) {
     mapRef.current = map;
@@ -40,7 +35,7 @@ const Map = () => {
   }, []);
 
   return (
-    <main className="main-wrapper">
+    <section className={s.mainWrapper}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
@@ -51,7 +46,7 @@ const Map = () => {
       >
         {/* Додаткові елементи, як маркери, можна додати тут */}
       </GoogleMap>
-    </main>
+    </section>
   );
 };
 
