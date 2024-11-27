@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { GoogleMap } from "@react-google-maps/api";
-import "./Main.css";
-import { defaultTheme } from "./Theme";
+import "./Map.css";
+import { defaultTheme } from "./ThemeMap";
 
 // Налаштування контейнера карти
 const mapContainerStyle = {
@@ -29,7 +29,7 @@ const center = {
   lng: 29.5, // Довгота
 };
 
-const Main = () => {
+const Map = () => {
   const mapRef = useRef(undefined);
   const onLoad = React.useCallback(function callback(map) {
     mapRef.current = map;
@@ -55,4 +55,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Map;
