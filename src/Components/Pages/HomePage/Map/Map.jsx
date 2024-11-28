@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { GoogleMap } from "@react-google-maps/api";
 import s from "./Map.module.css";
 import { defaultTheme } from "./ThemeMap";
@@ -25,7 +25,24 @@ const defaultOptions = {
 };
 
 const Map = ({ center }) => {
+  const [mapHeight, setMapHeight] = useState("100vh");
   const mapRef = useRef(undefined);
+
+  const updateMapHeight = () => {
+    const footer = document.querySelector("footer");
+    const footerHeight = footer ? footer.offsetHeight : 0;
+    setMapHeight(`calc(100vh - ${footerHeight}px)`);
+  };
+
+  useEffect(() => {
+    updateMapHeight();
+    window.addEventListener("resize", updateMapHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateMapHeight);
+    };
+  }, []);
+
   const onLoad = React.useCallback(function callback(map) {
     mapRef.current = map;
   }, []);
@@ -37,9 +54,9 @@ const Map = ({ center }) => {
   return (
     <section className={s.mainWrapper}>
       <GoogleMap
-        mapContainerStyle={mapContainerStyle}
+        mapContainerStyle={{ width: "100%", height: mapHeight }}
         center={center}
-        zoom={10} // Масштаб карти
+        zoom={15} // Масштаб карти
         onLoad={onLoad}
         onUnmount={onUnmount}
         options={defaultOptions}

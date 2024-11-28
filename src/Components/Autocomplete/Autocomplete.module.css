@@ -66,3 +66,9 @@
   background-color: #126fd5;
   border-radius: 20px;
 }
+.listItem strong {
+  font-size: 14px;
+}
+.listItem small {
+  font-size: 13px;
+}

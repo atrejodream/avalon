@@ -1,3 +1,5 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "./../../assets/logo.png";
 
@@ -70,14 +72,9 @@ const icons = {
 
 const Header = (props) => {
   const links = [
-    { link: "/", name: "Live map", icon: "globe" },
-    { link: "/vessels", name: "Vessels", icon: "ship" },
-    { link: "/ports", name: "Ports", icon: "anchor" },
-    { link: "/companies", name: "Companies", icon: "building" },
+    { link: "/", name: "Home", icon: "globe" },
+    { link: "/about", name: "About", icon: "globe" }, // Додано посилання на AboutPage
   ];
-
-  // Отримуємо поточний шлях
-  const currentPath = window.location.pathname;
 
   return (
     <header className="header">
@@ -85,18 +82,15 @@ const Header = (props) => {
       <nav className="header-nav">
         {links.map((el, index) => (
           <div key={index} className="nav-item">
-            <a
-              href={el.link}
-              className={`nav-link ${
-                (el.link === "/" && currentPath === "/") ||
-                currentPath === el.link
-                  ? "active"
-                  : ""
-              }`}
+            <NavLink
+              to={el.link}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
             >
               {el.icon && icons[el.icon]} {/* Додаємо SVG іконку */}
               <span>{el.name}</span>
-            </a>
+            </NavLink>
           </div>
         ))}
       </nav>

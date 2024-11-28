@@ -1,10 +1,14 @@
 .header {
-  background-color: #29333c;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 40px; /* Вузький розмір для приховування тексту */
+  left: 0;
+  top: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10px 0;
-  width: 40px; /* Вузький розмір для приховування тексту */
+  background-color: #29333c;
   transition: width 0.3s; /* Плавне розширення */
   padding: 5px;
   border-right: 4px solid #136fd5;
@@ -27,7 +31,7 @@
 .header-nav {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   width: 100%;
 }
 
